@@ -23,16 +23,19 @@ void view(std::vector<std::vector<int>> v)
 // セルの数を数え上げる
 int count(std::vector<std::vector<int>> v, int x, int y)
 {
+  return 3;
 }
 
 // 生死判定を行う
 int live_check(std::vector<std::vector<int>> v, int x, int y)
 {
+  return 1;
 }
 
 // mapを書きかえる
 std::vector<std::vector<int>> reload_map(std::vector<std::vector<int>> v)
 {
+  return vector v;
 }
 
 int main()
