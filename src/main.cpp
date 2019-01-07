@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include <unistd.h>
 #include <vector>
 
@@ -23,7 +23,17 @@ void view(std::vector<std::vector<int>> v)
 // セルの数を数え上げる
 int count(std::vector<std::vector<int>> v, int x, int y)
 {
-  return 3;
+  int return_number = 0;
+  std::vector<int> Counter = {-1,0,1};
+  for (int i = 0; i < 3; i++)
+  {
+    for (int j = 0; j < 3; j++)
+	{
+      return_number += v[x+j][y+i];
+	} 
+  }
+
+  return return_number;
 }
 
 // 生死判定を行う
