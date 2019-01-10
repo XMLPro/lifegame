@@ -28,9 +28,9 @@ int count(std::vector<std::vector<int>> v, int x, int y)
   for (int i = 0; i < 3; i++)
   {
     for (int j = 0; j < 3; j++)
-	{
+    {
       return_number += v[x+Counter[i]][y+Counter[j]];
-	} 
+    } 
   }
 
   return return_number;
