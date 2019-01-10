@@ -6,7 +6,18 @@ int n = 10;
 
 void view(std::vector<std::vector<int>> v)
 {
-  // vector(map)を表示する
+  for (int i = 1; i < n+1; i++)
+  {
+    for (int j = 1; j < n+1; j++)
+    {
+      if (v[i][j] == 0)
+        std::cout << "□ ";
+      else if (v[i][j] == 1)
+        std::cout << "■ ";
+    }
+    std::cout << std::endl;
+  }
+  std::cout << std::endl;
 }
 
 
