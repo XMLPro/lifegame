@@ -36,7 +36,13 @@ int live_check(std::vector<std::vector<int>> v, int x, int y)
 // mapを書きかえる
 std::vector<std::vector<int>> reload_map(std::vector<std::vector<int>> v)
 {
-  return vector v;
+  std::vector<std::vector<int>> cell(n+2, std::vector<int>(n+2,0));
+  for (int i = 1; i < n+1; i++)
+    for (int j = 1; j < n+1; j++)
+    {
+      cell[i][j] = live_check(v, i, j);
+    }
+    return cell;
 }
 
 int main()
