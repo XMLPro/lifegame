@@ -40,7 +40,21 @@ int count(std::vector<std::vector<int>> v, int x, int y)
 // 生死判定を行う
 int live_check(std::vector<std::vector<int>> v, int x, int y)
 {
-  return 1;
+  int check = count(v,x,y);
+  // 生存している場合で周りに2~3つある場合(全部で3~4)
+  if(v[x][y] == 1 && 2 < check && check < 5)
+  {
+    return 1;
+    // この関数終了
+  }
+  // 死亡していた場合で周りに3つちょうどある場合(生存している場合の3つは上でやった)
+  if(check == 3)
+  {
+    return 1;
+    // この関数終わり
+  }
+  return 0;
+  // じゃあな
 }
 
 // mapを書きかえる
